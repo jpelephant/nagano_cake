@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   patch 'orders' => 'orders#confirm'
   resources 'shipping_oaddress'
   
-  namespace admin do
+  namespace :admin do
     resources :sessions, only: [:new, :create, :destroy]
     get 'homes' => 'homes#top'
     resources :items, except: [:destroy]
