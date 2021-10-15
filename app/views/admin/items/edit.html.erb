@@ -3,7 +3,7 @@
     <div class="row">
     <%= form_for(@item, url: admins_item_path) do |f| %>
 
-    <div class="col-xs-5">
+
      <h2>商品編集</h2>
 
       <div class="item-new-form">
@@ -12,10 +12,8 @@
       <div class="product-img" style="margin-top: 20px;">
       <%= attachment_image_tag @item, :image, :fill, 400, 400, fallback: 'no_image.jpg' %>
       </div>
-    </div>
 
     <br><br><br>
-      <div class="col-xs-5 col-xs-offset-2">
         <table class="new-form-table">
           <tbody>
 
@@ -35,7 +33,6 @@
         </table>
         <div class="text-right">
         <%= f.submit "更新" ,class: "btn btn-primary text-right" %>
-        </div>
         </div>
         <% end %>
 
